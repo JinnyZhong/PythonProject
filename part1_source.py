@@ -38,8 +38,8 @@ def main():
     ## (2) Make a POST request using the cookies from (1) and all required name-value-pairs
     # session_requests_post = requests.session()
     res_post = session_requests.post(URL, 
-                                          data = {"username" : "jinny666",
-                                          "password" : "jinny666", 
+                                          data = {"username" : "",
+                                          "password" : "", 
                                           "csrf" : str(csrf), 
                                           "rid" : ''},
                                           headers = header, cookies = cookies_get,
@@ -66,7 +66,7 @@ def main():
     print(cookies_dict)
 
     # A boolean value to show your username is contained in the document in part (5)(a).
-    print(bool(profile.findAll(text = "jinny666")))
+    # print(bool(profile.findAll(text = "jinny666")))
     
 
 
